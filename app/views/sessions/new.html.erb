@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+<h1>Log in</h1>
+
+<%= form_tag sessions_path html: {class: 'form-horizontal center'} do %>
+  <div class="field form-group">
+    <%= label_tag :userid %><br />
+    <%= text_field_tag :userid, params[:userid] %>
+  </div>
+  <div class="field form-group">
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions form-group">
+    <%= submit_tag "Log in" %>
+  </div>
+<% end %>
+    </div>
+  </div>
+</div>

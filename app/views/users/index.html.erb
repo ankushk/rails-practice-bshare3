@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h2> Your files </h2>
+      <table class="table table-striped">
+      <%= render current_user.bfiles %>
+      </table>
+      <table>
+      <h4> Upload file </h4>
+      <%= render "bfiles/form" %>
+      </table>
+    </div>
+  </div>
+</div>

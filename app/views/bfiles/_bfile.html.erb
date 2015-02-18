@@ -1,0 +1,14 @@
+<tr>
+  <td>
+  <%= bfile.file_name %>
+  </td>
+  <td>
+  <%= link_to "Download", user_bfile_path(bfile.user, bfile) %> 
+  </td>
+  <td>
+  <%= link_to "Delete", [bfile.user, bfile], method: :delete, data: { confirm: 'Are you sure?' } %> 
+  </td>
+  <td>
+  <%= "#{bfile.updated_at}" %>
+  </td>
+</tr>

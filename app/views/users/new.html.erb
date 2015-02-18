@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <h1 class="login-title">Sign Up</h1>
+      <%= form_for @user, html: {class: 'form-horizontal center'} do |f| %>
+        <% if @user.errors.any? %>
+          <div class="error_messages">
+            <h4>Form is invalid</h4>
+            <ul>
+              <% for message in @user.errors.full_messages %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="field form-group">
+          <%= f.label :userid %><br />
+          <%= f.text_field :userid %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :password %><br />
+          <%= f.password_field :password %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <div class="actions form-group">
+            <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
