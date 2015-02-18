@@ -3,7 +3,8 @@
     <div class="col-md-8 col-md-offset-2">
       <h2> Your files </h2>
       <table class="table table-striped">
-      <%= render current_user.bfiles %>
+
+      <%= render current_user.bfiles.order(:created_at).reverse_order %>
       </table>
       <table>
       <h4> Upload file </h4>
